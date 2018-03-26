@@ -64,6 +64,4 @@ The result of the analysis is ${result}
 
 ```
 
-
-
-
+![example](https://user-images.githubusercontent.com/9889312/37932344-e1c13e96-310d-11e8-963c-5fe26c6523d1.png)
