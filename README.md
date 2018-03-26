@@ -1,5 +1,20 @@
 # Markdown kernel for Jupyter
 
+## Installation
+
+With a working [Jupyter](http://jupyter.org/) installation, run
+
+```
+$ pip install markdown-kernel
+$ python markdown_kernel.install
+```
+
+Verify if you have `markdown` kernel install with command
+
+```
+$ jupyter kernelspec list
+```
+
 ## Why a markdown kernel for Jupyter?
 
 A markdown kernel for Jupyter sounds like a stupid idea because Jupyter has
