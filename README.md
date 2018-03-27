@@ -9,11 +9,13 @@ $ pip install markdown-kernel
 $ python markdown_kernel.install
 ```
 
-Verify if you have `markdown` kernel install with command
+Verify if you have `markdown` kernel installed with command
 
 ```
 $ jupyter kernelspec list
 ```
+
+Then start `jupyter notebook` and create a notebook with `markdown` kernel? Not so fast.
 
 ## Why a markdown kernel for Jupyter?
 
