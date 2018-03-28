@@ -24,7 +24,7 @@ native Markdown cells. The problem is that Jupyter markdown cells are
 rendered at the frontend and do not interact with Jupyter kernels.
 It is therefore difficult to pass variables from kernels to markdown cells
 to create dynamic output, as what RStudio/RMarkdown has been doing for a while
-(See ipython/ipython#2592, jupyter/help#41,and  jupyter/notebook#3463 for related discussions).
+(See [ipython/ipython#2592](https://github.com/ipython/ipython/issues/2592), [jupyter/help#41](https://github.com/jupyter/help/issues/41),and [jupyter/notebook#3463](https://github.com/jupyter/notebook/issues/3463) for related discussions).
 
 This markdown kernel is a simple Jupyter kernel that parses and displays
  cell content as markdown. Cells with markdown texts such as
