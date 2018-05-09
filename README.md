@@ -6,7 +6,7 @@ With a working [Jupyter](http://jupyter.org/) installation, run
 
 ```
 $ pip install markdown-kernel
-$ python markdown_kernel.install
+$ python -m markdown_kernel.install
 ```
 
 Verify if you have `markdown` kernel installed with command
