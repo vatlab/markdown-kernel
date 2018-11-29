@@ -41,7 +41,7 @@ setup(name = "markdown-kernel",
     classifiers = [
         'Development Status :: 4 - Beta',
         'Environment :: Console',
-        'License :: OSI Approved :: GNU General Public License (GPL)',
+        'License :: OSI Approved :: BSD',
         'Natural Language :: English',
         'Operating System :: POSIX :: Linux',
         'Operating System :: MacOS :: MacOS X',
