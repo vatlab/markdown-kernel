@@ -43,6 +43,9 @@ def install_markdown_kernel_spec(args):
             json.dump(kernel_json, f, sort_keys=True)
         # Copy resources once they're specified
         shutil.copy(os.path.join(os.path.split(__file__)[
+                    0], 'kernel.js'), os.path.join(td, 'kernel.js'))
+        # Copy resources once they're specified
+        shutil.copy(os.path.join(os.path.split(__file__)[
                     0], 'logo-64x64.png'), os.path.join(td, 'logo-64x64.png'))
 
         KS = KernelSpecManager()
