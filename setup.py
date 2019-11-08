@@ -3,10 +3,8 @@
 # Copyright (c) Bo Peng and the University of Texas MD Anderson Cancer Center
 # Distributed under the terms of the 3-clause BSD License.
 
-import sys, os
-import shutil
+import os
 from setuptools import find_packages, setup
-from distutils import log
 
 # obtain version of markdown-kernel
 with open('src/markdown_kernel/_version.py') as version:
@@ -16,29 +14,35 @@ with open('src/markdown_kernel/_version.py') as version:
             break
 
 kernel_json = {
-    "argv":         ["python", "-m", "markdown_kernel.kernel", "-f", "{connection_file}"],
+    "argv": [
+        "python", "-m", "markdown_kernel.kernel", "-f", "{connection_file}"
+    ],
     "display_name": "Markdown",
-    "language":     "markdown",
+    "language": "markdown",
 }
 
+CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 
-dest = '''\
-A simple markdown kernel that render its input in markdown, pretty useless by itself
-but can be very useful with SoS (https://vatlab.github.io/SoS).
-'''
 
-setup(name = "markdown-kernel",
-    version = __version__,
-    description = 'A markdown kernel for Jupyter',
-    long_description=dest,
-    author = 'Bo Peng',
-    url = 'https://github.com/vatlab/markdown-kernel',
-    author_email = 'bpeng@mdanderson.org',
-    maintainer = 'Bo Peng',
-    maintainer_email = 'bpeng@mdanderson.org',
-    license = '3-clause BSD',
-    include_package_data = True,
-    classifiers = [
+def get_long_description():
+    with open(os.path.join(CURRENT_DIR, "README.md"), "r") as ld_file:
+        return ld_file.read()
+
+
+setup(
+    name="markdown-kernel",
+    version=__version__,
+    description='A markdown kernel for Jupyter',
+    long_description=get_long_description(),
+    long_description_content_type="text/markdown",
+    author='Bo Peng',
+    url='https://github.com/vatlab/markdown-kernel',
+    author_email='bpeng@mdanderson.org',
+    maintainer='Bo Peng',
+    maintainer_email='bpeng@mdanderson.org',
+    license='3-clause BSD',
+    include_package_data=True,
+    classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',
         'License :: OSI Approved :: BSD',
@@ -50,11 +54,10 @@ setup(name = "markdown-kernel",
         'Intended Audience :: Science/Research',
         'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: Implementation :: CPython',
-        ],
-    packages = find_packages('src'),
-    package_dir = {'': 'src'},
+    ],
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
     install_requires=[
-          'notebook',
-          'markdown',
-      ]
-)
+        'notebook',
+        'markdown',
+    ])

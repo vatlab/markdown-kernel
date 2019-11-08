@@ -1,3 +1,6 @@
+[![Anaconda-Server Badge](https://anaconda.org/conda-forge/markdown-kernel/badges/version.svg)](https://anaconda.org/conda-forge/markdown-kernel)
+[![PyPI version](https://badge.fury.io/py/markdown-kernel.svg)](https://badge.fury.io/py/markdown-kernel)
+
 # Markdown kernel for Jupyter
 
 ## Installation
