@@ -70,3 +70,5 @@ Most notably, you can use
 to expand inline expressions in `R Markdown` texts.
 
 ![image](https://user-images.githubusercontent.com/9889312/68431685-6fb41e80-0178-11ea-8ccb-56135d6a1c37.png)
+
+This technique is used by [sos-rmarkdown](https://github.com/vatlab/sos-rmarkdown), a RMarkdown to SoS Notebook converter to convert markdown text with inline expressions.
