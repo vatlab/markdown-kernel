@@ -21,22 +21,26 @@ class markdown_kernel(Kernel):
         'codemirror_mode': 'markdown',
     }
 
-    def __init__(self, **kwargs):
-        super(markdown_kernel, self).__init__(**kwargs)
-
-    def do_execute(self, code, silent, store_history=True, user_expressions=None,
+    def do_execute(self,
+                   code,
+                   silent,
+                   store_history=True,
+                   user_expressions=None,
                    allow_stdin=False):
-        self.send_response(
-            self.iopub_socket,
-            'display_data',
-            {
-                'source': 'markdown', 'metadata': {},
-                'data': {'text/markdown': code}
-            })
-        return {'status': 'ok',
-                'payload': [],
-                'user_expressions': {}
+        if not silent:
+            self.send_response(self.iopub_socket, 'display_data', {
+                'source': 'markdown',
+                'metadata': {},
+                'data': {
+                    'text/markdown': code
                 }
+            })
+        return {
+            'status': 'ok',
+            'payload': [],
+            'execution_count': self.execution_count,
+            'user_expressions': {}
+        }
 
 
 if __name__ == '__main__':
