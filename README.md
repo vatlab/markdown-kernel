@@ -57,6 +57,9 @@ magic `%expand`.
 
 ![image](https://user-images.githubusercontent.com/9889312/68431746-878ba280-0178-11ea-8c47-79f5db775299.png)
 
+**NOTE**: Starting with [`jupyterlab-sos`](https://github.com/vatlab/jupyterlab-sos) version 0.6.3, 
+the input of codecell with Markdown kernel are folded automatically after cell execution.
+
 ### Expand expressions in subkernels such as R
 
 The `--in` option of magic `%expand` allows you to expand the cell content in
