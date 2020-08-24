@@ -29,7 +29,6 @@ class markdown_kernel(Kernel):
                    allow_stdin=False):
         if not silent:
             self.send_response(self.iopub_socket, 'display_data', {
-                'source': 'markdown',
                 'metadata': {},
                 'data': {
                     'text/markdown': code
